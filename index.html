@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my-portfolio</title>
+    <script>
+        "use strict";
+        
+        !function() {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+                t.factory = function(e) {
+                return function() {
+                    var n = Array.prototype.slice.call(arguments);
+                    return n.unshift(e), t.push(n), t;
+                };
+                }, t.methods.forEach(function(e) {
+                t[e] = t.factory(e);
+                }), t.load = function(t) {
+                var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                var i = document.getElementsByTagName("script")[0];
+                i.parentNode.insertBefore(o, i);
+                };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('iwyrg46a33sv');
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="href=://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    @media only screen and (min-device-width : 1030px) and (max-device-width : 1336px){
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .mobilecontainer {
+        /* max-width: 580px; */
+        margin: auto;
+        background-color: #555;
+        /* height: 500px; */
+        color: white;
+        border-radius: 10px;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: orangered;
+        position: relative;
+    }
+
+    .topnav #Links {
+        display: none;
+    }
+
+    .topnav a {
+        float: left;
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    .hide{
+        display: none;
+    }
+    .news:hover + .hide{
+        display: block;
+        padding: 20px;
+    }
+
+    .topnav a.icon {
+        font-size: 2rem;
+        float: right;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+     }
+
+    .active {
+        
+        color: white;
+    }
+
+    
+    body {
+    padding: 25px;
+    background-color: indigo;
+    color: black;
+    font-family: sans-serif;
+    }
+
+    .dark-mode {
+    background-color: black;
+    color: white;
+    }
+    .intro{
+        color: orangered;
+    }
+    .mobile-container{
+        display: none;
+    }
+    .first{
+        color: orange;
+    }
+    .sub-first{
+        font-size: 2.4rem;
+        margin: 40px;
+        text-align: center;
+    }
+    .sub-first span{
+        text-decoration: overline;
+    }
+    .sus-first{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .sut-first{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .seccond{
+        display: flex;
+        color: white;
+        margin: 50px;
+    }
+    .sub-second{
+        padding: 10px;
+        font-size: 20px;
+    }
+    .second-para{
+        margin: 20px;
+        font-size: 25px;
+    }
+    .images{
+        text-align: center;
+    }
+    .sub-third img{
+        width: 150px;
+        border-radius: 0%;
+        
+    }
+    .sub-third h1{
+        color: orange;
+        margin: 5px;
+        text-align: center;
+    }
+    .sub-second span{
+        color: orange;
+        text-decoration: overline;
+    }
+    .creat{
+        display: none;
+    }
+
+    .sus-second img{
+        width: 350px;
+        /* padding: 10px; */
+        border: 10px solid orange;
+        border-radius: 10px;
+    }
+    .third{
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        display: flex;
+    }
+    .sub-third{
+        background-color: black;
+        box-shadow: 5px 10px 20px indigo;
+        color: white;
+        border: 2px solid white;
+        border-radius: 30px;
+        padding: 20px;
+        margin: 20px;
+    }
+    .sub-third p{
+        text-align: center;
+        /* padding: 10px; */
+        /* font-size: 20px; */
+    }
+    .sux-third{
+        color: white;
+        padding: 20px;
+        margin: 40px;
+    }
+    .sux-third p{
+        padding: 10px;
+        font-size: 20px;
+    }
+    button{
+        color: orange;
+        width: 150px;
+        padding: 9px 0;
+        text-align: center;
+        margin: 5px;
+        border-radius: 15px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+        font-weight: bold;
+        border: 2px solid indigo;
+        cursor: pointer;
+    }
+    .number {
+        margin: 5px;
+        padding: 10px;
+        text-align: center;
+        color: wheat;
+        gap: 50px;
+        display: flex;
+        font: 90px;
+        }
+    #value,
+    #second,
+    #third,
+    #forth {
+        font-size: 5rem;
+    }
+
+
+    .sub-number{
+        background-color: black;
+        border: 2px solid white;
+        padding: 5px;
+    }
+
+    .skills {
+        text-align: right; 
+        padding-top: 10px; 
+        padding-bottom: 10px; 
+        color: white;
+    }
+        .html {width: 90%; background-color: #04AA6D;} /* Green */
+        .css {width: 80%; background-color: #2196F3;} /* Blue */
+        .js {width: 65%; background-color: #f44336;} /* Red */
+        .php {width: 60%; background-color: #808080;} /* Dark Grey */
+
+        .my-skill{
+            margin: 20px;
+            padding: 5px;
+        }
+        .myskill{
+            color: red;
+            font-size: 1.5rem;
+        }
+        .myskil{
+            color: orange;
+            font-size: 1rem;
+        }
+        .textpg {
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 4.3rem;
+            background: #313534;
+            color: #fff;
+            padding: 20px;
+        } 
+        .pimg1 {
+            background-image: url(./images/2000_5cc99be3445c9.webp);
+            min-height: 100%;
+        }
+        .pimg2 {
+            background-image: url(images/dell-1o5MZblCP50-unsplash.jpg);
+            min-height: 400px;
+        }
+        .pimg3 {
+            background-image: url(images/alex-varela-ackaP-7yUKE-unsplash.jpg);
+            min-height: 400px;
+        }
+        .pimg4 {
+            background-image: url(./images/black-monstera-leaves-background-wallpaper_53876-102420.webp);
+            min-height: 400px;
+        }
+        .pimg1,
+        .pimg2,
+        .pimg3,
+        .pimg4 {
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .ptext, H3{
+            color: yellow;
+            padding-bottom: 50px;
+            padding: 10px;
+        }
+        .ptext {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: black;
+            font-size: 27px;
+            letter-spacing: 8px;
+            text-transform: uppercase; 
+        }
+        .section {
+            padding: 50px 80px;
+            text-align: center; 
+        }
+        .section-lit {
+            background: #f4f4f4;
+            color: #666;
+        }
+        .section-dak {
+            background-color: #282e34;
+            color: #ddd;
+        }
+        .condown {
+            background-color: black;
+        }
+        .menud {
+            text-align: center;
+            font-size: 30px;
+            padding: 20px;
+            text-decoration: none;
+        }
+        .copy {
+            color: white;
+            text-align: center;
+        }
+        .project1{
+            display: flex;
+            justify-content: space-between;
+        }
+        .sub-project img{
+            width: 390px;
+            margin: 40px;
+        }
+        .sub-secondd{
+            font-size: 1.2rem;
+            color: yellow;
+            /* margin: 40px; *//*coming back here*/
+            /* padding: 10px; */
+        }
+        .contactp{
+            padding: 10px;
+            margin: 10px;
+        }
+        .seccond{
+            display: none;
+        }
+        .third{
+            display: none;
+        }
+        .number{
+            display: none;
+        }
+        .menud{
+        text-decoration: none;
+        padding: 10px;
+        color: orange;
+        text-align: center;
+    }
+    }
+
+
+    @media only screen and (min-device-width : 360px) and (max-device-width : 640px){
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+    background-color: indigo;
+    color: black;
+    font-family: sans-serif;
+    }
+    .dark-mode {
+    background-color: black;
+    color: white;
+    }
+    .mobilecontainer{
+        display: none;
+    }
+    .sub-first{
+        color: orange;
+        font-size: 20px;
+    }
+    .sub-second h1{
+        font-size: 25px;
+    }
+    .sub-first span{
+        text-decoration: overline;
+    }
+    .mobile-container {
+        /* max-width: 480px; */
+        margin: auto;
+        background-color: #555;
+        /* height: 500px; */
+        color: white;
+        border-radius: 10px;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+        position: relative;
+    }
+
+    .topnav #myLinks {
+        display: none;
+    }
+
+    .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+        height: 60px;
+        background-color: black;
+        position: relative;
+    }
+
+    .topnav a.icon {
+        color: #ffa500;
+        font-size: 1.2rem;
+        background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav a:hover {
+        background-color: orangered;
+        color: black;
+    }
+
+    .active {
+        background-color: rgba(0, 0, 0, 0.711);
+        color: white;
+    }
+    
+    .first{
+        display: none;
+    }
+    .intro{
+        font-size: 20px;
+        color: orangered;
+    }
+    .seccond{
+        /* display: flex; */
+        color: white;
+        margin: 20px;
+    }
+    .sub-second{
+        padding: 20px;
+        /* padding: 10px; */
+        font-size: 10px;
+    }
+    .sub-second h1{
+        font-size: 1.8rem;
+    }
+    .second-para{
+        margin: 20px;
+        font-size: 25px;
+    }
+    .sus-second{
+        background-color: orangered;
+        text-align: center;
+    }
+    .creat{
+        font-size: 1.8rem;
+        /* margin: 3px; */
+    }
+    .creat h1{
+        padding: 7px;
+    }
+    .creat span{
+        color: orangered;
+    }
+    .sus-second img{
+        margin: 20px;
+        width: 230px;
+        border: 15px solid indigo;
+        border-radius: 10px;
+    }
+    .third{
+        padding: 10px;
+    }
+    .my-third{
+        padding: 3px;
+    }
+    .sub-third{
+        background-color: black;
+        box-shadow: 5px 10px 20px orange;/*indigo*/
+        color: white;
+        border: 2px solid white;
+        border-radius: 30px;
+        padding: 20px;
+        margin: 20px;
+    }
+    .images{
+        text-align: center;
+    }
+    .sub-third img{
+        width: 150px;
+        border-radius: 0%;
+        
+    }
+    .sub-third h1{
+        color: orange;
+        margin: 5px;
+        text-align: center;
+    }
+    .sub-third p{
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+    }
+    .sux-third{
+        color: white;
+        padding: 20px;
+        margin: 40px;
+    }
+    .sux-third p{
+        padding: 10px;
+        font-size: 15px;
+    }
+    .sux-third h1{
+        color: orange;
+        margin: 5px;
+        text-align: center;
+    }
+    .web{
+        text-decoration: none;
+    }
+    button{
+        color: orange;
+        width: 120px;
+        padding: 9px 0;
+        text-align: center;
+        margin: 5px;
+        border-radius: 15px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+        font-weight: bold;
+        border: 2px solid indigo;
+        cursor: pointer;
+    }
+    
+    .counter {
+        width: 100px;
+        font: 800 40px system-ui;
+        overflow: hidden;
+        }
+    .numbers {
+        width: auto;
+        display: flex;
+        animation: countNumber 4s infinite alternate;
+        animation-timing-function: steps(10);
+        }
+    .numbers div {
+        text-align: center;
+        flex: 0 0 100px;
+        }
+
+    @keyframes countNumber {
+        0% {
+            margin-left: 0px;
+        }
+        100% {
+            margin-left: -1000px;
+        }
+        }
+    .number {
+        border-radius: 30px;
+        padding: 20px;
+        margin: 20px;
+        border: 2px solid white;
+        padding: 8px;
+        background-color: orangered;/*indigo*/
+        text-align: center;
+        color: wheat;
+        gap: 60px;
+        font: 90px;
+    }
+    #value,
+    #second,
+    #third,
+    #forth {
+        font-size: 5rem;
+    }
+
+    .sub-number{
+        padding: 9px;
+    }
+    *{box-sizing:border-box}
+
+        /* Container for skill bars */
+    .container {
+        width: 100%; 
+        background-color: #ddd;
+     }
+    .skills {
+        text-align: right; 
+        padding-top: 10px; 
+        padding-bottom: 10px; 
+        color: white;
+    }
+    .html {width: 90%; background-color: #04AA6D;} /* Green */
+    .css {width: 80%; background-color: #2196F3;} /* Blue */
+    .js {width: 65%; background-color: #f44336;} /* Red */
+    .php {width: 60%; background-color: #808080;} /* Dark Grey */
+
+    .my-skill{
+            margin: 20px;
+            padding: 5px;
+        }
+    .myskill{
+            color: red;
+            font-size: 1.5rem;
+        }
+    .myskil{
+            color: orange;
+            font-size: 1rem;
+        }
+    .pimg1 {
+            background-image: url(images/2000_5cc99be3445c9.webp);
+            min-height: 100%;
+        }
+    .pimg2 {
+            background-image: url(images/dell-1o5MZblCP50-unsplash.jpg);
+            min-height: 300px;
+        }
+    .pimg3 {
+            background-image: url(images/alex-varela-ackaP-7yUKE-unsplash.jpg);
+            min-height: 300px;
+        }
+    #pimg4 {
+            background-image: url(images/dell-1o5MZblCP50-unsplash.jpg);
+            min-height: 300px;
+        }
+
+    .pimg1,
+    .pimg2,
+    .pimg3,
+    #pimg4 {
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+
+    .ptext, H3{
+            color: yellow;
+            padding-bottom: 50px;
+            padding: 10px;
+        }
+
+    .ptext {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: black;
+            font-size: 17px;
+            letter-spacing: 8px;
+            text-transform: uppercase; 
+        }
+    .textpg {
+                cursor: pointer;
+                font-size: 20px;
+                background: indigo;
+                color: burlywood;
+                padding: 20px;
+                text-decoration: none;
+            }
+    .section {
+                padding: 40px 70px;
+                text-align: center; 
+            }
+    .section-lit {
+                background:gray;
+                /* color: #666; */
+            }
+    .section-lit h2 {
+                color: orangered;
+            }
+    .section-lit p {
+                color: white;
+            }
+    .section-dak {
+                background-color: #282e34;
+                color: #ddd;
+            }
+    .section-dak h2 {
+                color: orangered;
+            }
+
+    .condown {
+                background-color: black;
+            }
+    .menud {
+                text-align: center;
+                font-size: 30px;
+                padding: 20px;
+                text-decoration: none;
+            }
+    .copy {
+                color: white;
+                text-align: center;
+            }
+    .project1{
+            justify-content: space-between;
+        }
+    .sub-project img{
+            width: 230px;
+            margin: 40px;
+        }
+    .sub-secondd{
+            font-size: 1rem;
+            color: yellow;
+        }
+    }
+    .project1 {
+        display: none;
+    }
+    #textme {
+        padding: 10px;
+        margin: 25px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    span{
+        color: orange;
+        text-decoration: overline;
+        }
+    .ex{
+        color: white;
+        text-decoration: none;
+        
+    }
+    .down-menu{
+        display: flex;
+        padding: 10px;
+        color: white;
+        justify-content: space-between;
+    }
+    .expert{
+        background-color: black;
+    }
+    .expert h1{
+        text-align: center;
+        padding: 5px;
+        color: white;
+    }
+    .menud{
+        display: flex;
+        background-color: black;
+    }
+    .menud a{
+        text-decoration: none;
+        padding: 10px;
+        color: orange;
+        margin: 5px;
+    }
+    .copy{
+        background-color: black;
+        color: white;
+        padding: 5px;
+    }
+    .toast-body{
+        color: indigo;
+    }
+    .rain{
+    }
+
+    .rainbow{
+    display: block;
+    }
+
+    .rain{
+    font-family: Oswald;
+    font-size: 40px;
+    animation: Color 4s linear infinite;
+    -webkit-animation: Color 4s ease-in-out infinite;
+    text-shadow: 10px 10px #F0F0F0;
+    }
+
+    @keyframes Color{
+    0%{
+        color:#A0D468;
+    }
+    
+    20%{
+        color:#4FC1E9;
+    }
+    
+    40%{
+        color:#FFCE54;
+    }
+    
+    60%{
+        color:#FC6E51;
+    }
+    
+    80%{
+        color:#ED5565;
+    }
+    
+    100%{
+        color:#AC92EC;
+    }
+    }
+
+    @-moz-keyframes Color{
+    0%{
+        color:#A0D468;
+    }
+    
+    20%{
+        color:#4FC1E9;
+    }
+    
+    40%{
+        color:#FFCE54;
+    }
+    
+    60%{
+        color:#FC6E51;
+    }
+    
+    80%{
+        color:#ED5565;
+    }
+    
+    100%{
+        color:#AC92EC;
+    }
+    }
+
+    @-webkit-keyframes Color{
+    0%{
+        color:#A0D468;
+    }
+    
+    20%{
+        color:#4FC1E9;
+    }
+    
+    40%{
+        color:#FFCE54;
+    }
+    
+    60%{
+        color:#FC6E51;
+    }
+    
+    80%{
+        color:#ED5565;
+    }
+    
+    100%{
+        color:#AC92EC;
+    }
+    }
+    
+</style>
+<body>
+    <div class="mobilecontainer">
+        
+        <div class="topnav">
+            <a href="#home" class="active">NAVIGATION</a>
+          <div id="Links">
+              <div class="news"><a href="#news">News</a></div>
+              <div class="hide">hello my name is ayo</div>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+          </div>
+            <a href="javascript:void(0);" class="icon" onclick="yyFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+        
+
+    <section class="first">
+        <div class="sub-first">WEL<span>COME</span></div>
+        <div class="sus-first">
+        I'M A CREATIVE WEBSITE DEVELOPER
+        </div>
+        <div class="sut-first">
+        WE BUILD YOUR BUSINESS IDEA
+        </div>
+    </section>
+    <div class="mobile-container">
+
+        
+        <div class="topnav">
+          <a href="#home" class="active"><div class="sub-first">WEL<span>COME</span></div></a>
+          <div id="myLinks">
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+          </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- <div class="toast">
+        <div class="toast-header">
+          Toast Header
+        </div>
+        <div class="toast-body">
+          Some text inside the toast body
+        </div>
+      </div> -->
+    <div class="toast" data-autohide="false">
+        <div class="toast-header">
+          <strong class="mr-auto text-primary">HELLO WORLD</strong>
+          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+        </div>
+        <div class="toast-body">
+          Have a conversation with me through a chat-box below. 👇
+        </div>
+    </div>
+    <button onclick="beeFunction()"><ion-icon name="moon"></ion-icon></button>
+    <section class="seccond">
+        <div class="sub-second" data-aos="flip-left">
+            <div class="intro">-Intro</div>
+            <div><h1>HELLO <br> I'M ABDUL <span>AKEEM</span> ADEBAYO</h1></div>
+            <div class="second-para">
+                I'm a creative agency that specializes in website development and designing. 
+                I design event that put your purpose into practise by inspiring the communities of 
+                people who matter most to your mission...
+            </div>
+            <a href="hireme.html" class="contact"><button>CONTACT-ME</button></a><br>
+            <a href="#pimg4" class="contact"><button>EXPLORE</button></a>
+        </div>
+        <div class="creat"><h1><span>CREA</span>TIVE</h1></div>
+        <section>
+            <div class="sus-second">
+                <img src="images/iuu.jpeg" data-aos="flip-up" alt="">
+            </div>
+        </section>
+    </section>
+
+    <section class="third">
+        <div class="sub-third" data-aos="fade-up">
+            <div  class="images"><img src="images/screen-sizes-768x432.jpg "alt=""></div>
+            <h1>RESPONSIVE WEBSITE</h1>
+            <P>
+                Responsive web design (RWD) is a web development approach that creates 
+                dynamic changes to the appearance of a website, depending on 
+                the screen size and orientation of the device being used to view it.
+            </P>
+        </div>
+
+        <div class="my-third">
+            <div class="sub-third" data-aos="flip-left">
+                <div class="images"><img src="images/OVJceGbQ-768x434.png" alt=""></div>
+                <h1>UI/DESIGN</h1>
+                <P>
+                    User interface design or user interface engineering is the design of 
+                    user interfaces for machines and software, such as computers, home appliances, 
+                    mobile devices, and other electronic devices, 
+                    with the focus on maximizing usability and the user experience.
+                </P>
+            </div>
+        </div>
+
+        <div class="sub-third" data-aos="fade-right"
+                                data-aos-offset="300"
+                                data-aos-easing="ease-in-sine">
+            <div class="images"><img src="images/jira-generated-image-static-7c3d3052-2b19-4f38-8500-e04fd17cf311-768x434.png" alt=""></div>
+            <h1>BRAND DESIGN</h1>
+            <P>
+                A successful brand can get you customers, and enable you to keep them at the same time. 
+                Also, by keeping your buyers satisfied with your products or services, they will remain 
+                loyal. The first thing you should do, however, is to tell them what your brand is all about. 
+                You can also build your brand through web design.
+            </P>
+        </div>
+    </section>
+    
+    <section class="third">
+        <div class="sub-third" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
+            <div  class="images"><img src="images/color-scheme-for-app-design-768x434.jpg"alt=""></div>
+            <h1>PERFECT COLOR ON WEBSITE</h1>
+            <P>
+                When it comes to your website, you need to give your customers a terrific experience to get 
+                them hooked on your brand.
+                Imagine you launch the perfect website for your business. Everything is flawless—the layout, 
+                the performance, the navigation, the copy. It all creates the dream experience for your users, 
+                and people rave over it.
+            </P>
+        </div>
+
+        <div class="my-third">
+            <div class="sub-third" data-aos="fade-up">
+                <div class="images"><img src="images/OVJceGbQ-768x434.png" alt=""></div>
+                <h1>UX/DESIGN</h1>
+                <P>
+                    User experience (UX) design is the process design teams use to create products 
+                    that provide meaningful and relevant experiences to users, UX design involves the design of the entire 
+                    process of acquiring and integrating the product, including aspects of branding, design, usability and function.
+                </P>
+            </div>
+        </div>
+
+        <div class="sux-third" data-aos="fade-up">
+            <img src="" alt="">
+            <h1>WHY HIRE ME</h1>
+            <P class="para-g">
+                I am an inventive and focused <span class="web">Website Developer</span>. I've used my passion for solving 
+                problems and assisting people and businesses in accomplishing their objectives by making users' 
+                lives better through design so far. I firmly believe in taking a collaborative approach to each project. 
+                I enjoy solving users' problems, and I love working with a team to achieve a common goal.
+            </P>
+            <a href="hireme.html" class="contact"><button>CONTACT-ME</button></a>
+        </div>
+    </section>
+    <section class="number">
+        <div class="sub-number">
+            <div id="value">100</div>
+            <h1>HAPPY CLIENT</h1>
+        </div>
+        <div class="sub-number">
+            <div id="second">100</div>
+            <h1>PROJECT DONE</h1>
+        </div>
+        <div class="sub-number">
+            <div id="third">100</div>
+            <h2>CERTIFICATIONS</h2>
+        </div>
+        <div class="sub-number">
+            <div id="forth">100</div>
+            <h1>YEARS EXPERIENCE</h1>
+        </div>
+    </section>
+
+    <section class="my-skill">
+        <h1 class="myskill">-MY SKILLS</h1>
+        <p class="myskil">HTML</p>
+            <div class="container">
+            <div class="skills html">90%</div>
+            </div>
+
+        <p class="myskil">CSS</p>
+            <div class="container">
+            <div class="skills css">80%</div>
+            </div>
+
+        <p class="myskil">JavaScript</p>
+            <div class="container">
+            <div class="skills js">65%</div>
+            </div>
+
+        <p class="myskil">REACT</p>
+            <div class="container">
+            <div class="skills php">60%</div>
+            </div>
+    </section>
+
+    <section>
+        <section class="pimg1">
+            <div class="ptext">
+            </div>
+    
+        </section>
+        <section class="section section-lit">
+            <h2>Acknowledgment</h2>
+            <p data-aos="zoom-in">
+                I would like to express my greatest appreciation to all the individuals who have 
+                helped and supported me throughout the project. I am thankful to my mentor <span class="web">ASIWAJU</span> for 
+                his ongoing support, from initial advice, and encouragement, which led to the final report of this project.
+            </p>
+        </section>
+        <section class="pimg2">
+            <section id="pimg4">
+                <div class="ptext">
+                    <span class="textpg">INNOVATIVE💕</span>
+                    <a href="login.html" id="textme"><div id="textme" data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000"><span class="ex">👉EX</span><span>PLORE</span></div></a>
+                </div>
+            </section>
+        </section>
+
+        <section class="section section-dak">
+            <div class="rainbow"data-aos="zoom-in">
+                <p class="rain">PORTFOLIO</p>
+            </div>
+       </section> 
+       <section class="pimg3">
+            <div class="ptext">
+                <span class="textpg">CREATIVITY🥰</span>
+            </div>
+        </section>
+    </section>
+    
+    <section class="expert">
+       <h1>EXPERTISE</h1>
+       <div class="condown">
+        <div class="menud">
+            <a href="#">SKILLS</a>
+            <a href="#">MENU</a>
+            <a href="#">VISIT</a>
+        </div>
+        <div class="copy">
+            Copyright © 2022 All rights reserved - Portfolio<br>
+            Powered By @Adebayo
+        </div>
+    </div>
+    </section>
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+        <script>
+            function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+            }
+        </script>
+        <script>
+            function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+            }
+
+            const obj = document.getElementById("value");
+            animateValue(obj, 1, 50, 50000);
+        </script>
+
+        <script>
+            function animateValue(boj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                boj.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+            }
+
+            const boj = document.getElementById("second");
+            animateValue(boj, 30, 9, 50000);
+        </script>
+
+        <script>
+            function animateValue(boy, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                boy.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+            }
+
+            const boy = document.getElementById("third");
+            animateValue(boy, 1, 3, 50000);
+        </script>
+
+        <script>
+            function animateValue(bot, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                bot.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+            }
+
+            const bot = document.getElementById("forth");
+            animateValue(bot, 1, 2, 50000);
+        </script>
+
+        <script>
+            function yyFunction() {
+            var y = document.getElementById("Links");
+            if (y.style.display === "block") {
+                y.style.display = "none";
+            } else {
+                y.style.display = "block";
+            }
+            }
+        </script>
+        <script>
+            $(document).ready(function(){
+              $('.toast').toast('show');
+            });
+        </script>
+        <script>
+            function beeFunction() {
+               var element = document.body;
+               element.classList.toggle("dark-mode");
+            }
+            </script>
+</body>
+</html>
